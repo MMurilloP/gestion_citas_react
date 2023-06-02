@@ -1,31 +1,27 @@
-const Patient = () => {
+/* eslint-disable react/prop-types */
+const Patient = ({ paciente }) => {
+  const {nombre,propietario,email,fecha,sintomas} = paciente
   return (
-    <div className="m-3 bg-white shadow-md px-5 py-10 rounded-xl">
+    <div className="mx-5 my-10 bg-white shadow-md px-5 py-10 rounded-xl">
       <p className="font-bolt mb-3 text-gray-700 uppercase">
         Nombre:
-        <span className="font-normal normal-case"> Hook</span>
+        <span className="font-normal normal-case"> {nombre}</span>
       </p>
       <p className="font-bolt mb-3 text-gray-700 uppercase">
         Propietario:
-        <span className="font-normal normal-case"> Manuel</span>
+        <span className="font-normal normal-case"> {propietario}</span>
       </p>
       <p className="font-bolt mb-3 text-gray-700 uppercase">
-        Emial:
-        <span className="font-normal normal-case"> correo@correo.com</span>
+        Email:
+        <span className="font-normal normal-case"> {email}</span>
       </p>
       <p className="font-bolt mb-3 text-gray-700 uppercase">
         Fecha Alta:
-        <span className="font-normal normal-case"> 10 diciembre 2022</span>
+        <span className="font-normal normal-case"> {fecha}</span>
       </p>
       <p className="font-bolt mb-3 text-gray-700 uppercase">
         Sintomas:
-        <span className="font-normal normal-case">
-          {" "}
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus
-          officiis possimus iure adipisci. Perspiciatis, rem sequi provident
-          eveniet nihil quibusdam quod nemo aspernatur vitae deleniti dolores
-          maiores recusandae odio impedit?
-        </span>
+        <span className="font-normal normal-case"> {sintomas}</span>
       </p>
     </div>
   );
